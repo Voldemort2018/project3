@@ -21,7 +21,7 @@ import {
 	FormGroup,
 	Label
 } from 'reactstrap';
-import './navbar.css';
+// import './navbar.css';
 
 export default class NavbarLogin extends React.Component {
 	constructor(props) {
