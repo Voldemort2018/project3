@@ -4,7 +4,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Components/navbar/Navbar';
 import Home from './Components/home/Home';
-import ModalLogin  from './Components/modal/Modal';
+import Users  from './Components/users/users';
 
 class App extends Component {
   render() {
@@ -13,7 +13,7 @@ class App extends Component {
         <div>
           <Navbar/>
           <Route exact path = "/" component = {Home}/>
-          <Route exact path ="./modal" component ={ModalLogin }/>
+          <Route exact path ="/users" component ={Users}/>
         </div>
       </Router>
     );
