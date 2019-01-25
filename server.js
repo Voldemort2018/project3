@@ -11,7 +11,7 @@ app.use(express.json());
 
 // // SERVE UP STATIC ASSETS (HEROKU)
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static("client/build"));
+    app.use(express.static("build/client/src"));
 }
 
 // // ADD ROUTES (API AND VIEW) 
