@@ -13,8 +13,8 @@ export default class Home extends Component {
 				<header>
 					<Jumbotron fluid>
 						<Container fluid>
-							<div class="demo-header demo-header-image">
-								<h1 class="title-uppercase">ShinDig</h1>
+							<div className="demo-header demo-header-image">
+								<h1 className="title-uppercase">ShinDig</h1>
 								<h4>Execute with Efficiency</h4>
 							</div>
 						</Container>
@@ -22,7 +22,7 @@ export default class Home extends Component {
 				</header>
 				<Container>
 					<div className="header" />
-					<h2 middle>Our Mission</h2>
+					<h2 middle = "true">Our Mission</h2>
 					<p>
 						ShinDig is here to empower individuals to create, plan, and execute any event type, at any size.
 						ShinDig will become the only applicaiton needed for both host and guest to assign tasks, save
@@ -62,7 +62,7 @@ export default class Home extends Component {
 				</section>
 				<br />
 				<hr />
-				<section class ="seperate">
+				<section className ="seperate">
 				<div className="section text-center">
                 <div className="features">
 				<br></br>
@@ -72,7 +72,7 @@ export default class Home extends Component {
                     <div className="col-md-4">
                       <div className="info">
                         <div className="icon icon-info">
-						<i class="fas fa-signature fa-3x"></i>
+						<i className="fas fa-signature fa-3x"></i>
 						
                         </div>
 						<br></br>
@@ -83,7 +83,7 @@ export default class Home extends Component {
                     <div className="col-md-4">
                       <div className="info">
                         <div className="icon icon-success">
-						<i class="fas fa-user-clock fa-3x"></i>
+						<i className="fas fa-user-clock fa-3x"></i>
 						
 						<br>
 						</br>
@@ -96,7 +96,7 @@ export default class Home extends Component {
                     <div className="col-md-4">
                       <div className="info">
                         <div className="icon icon-danger">
-						<i class="fas fa-glass-cheers fa-3x"></i>
+						<i className="fas fa-glass-cheers fa-3x"></i>
                         </div>
 						<br></br>
                         <h4 className="info-title">Be Your Own Event Planner</h4>
@@ -113,39 +113,39 @@ export default class Home extends Component {
 				<br></br>
 				<Container>
                 <div id="images">
-                     <div class="row">
+                     <div className="row">
                         
-                        <div class="col order-sm-2  ">
+                        <div className="col order-sm-2  ">
                             
-                            <img src="assets/img/jav.jpg" alt="Thumbnail Image" class="img-thumbnail img-responsive"/>
-                            <p class="text-center">Javier Vega <i class="fab fa-github"></i></p>
-							<p class="text-center">Front End</p>
+                            <img src="assets/img/jav.jpg" alt="Thumbnail" className="img-thumbnail img-responsive"/>
+                            <p className="text-center">Javier Vega <i className="fab fa-github"></i></p>
+							<p className="text-center">Front End</p>
                         </div>
-						<div class="col order-sm-2  ">
+						<div className="col order-sm-2  ">
                             
-                            <img src="assets/img/mike.jpg" alt="Thumbnail Image" class="img-thumbnail img-responsive"/>
-                            <p class="text-center">Michael Wenhold <i class="fab fa-github"></i></p>
-							<p class="text-center">Database</p>
+                            <img src="assets/img/mike.jpg" alt="Thumbnail" className="img-thumbnail img-responsive"/>
+                            <p className="text-center">Michael Wenhold <i className="fab fa-github"></i></p>
+							<p className="text-center">Database</p>
                         </div>
-						<div class="col  order-sm-2  ">
+						<div className="col  order-sm-2  ">
                             
-                            <img src="assets/img/steph.png" alt="Thumbnail Image" class="img-thumbnail img-responsive"/>
-                            <p class="text-center">Steph Graham <i class="fab fa-github"></i></p>
-							<p class="text-center">Back End</p>
+                            <img src="assets/img/steph.png" alt="Thumbnail" className="img-thumbnail img-responsive"/>
+                            <p className="text-center">Steph Graham <i className="fab fa-github"></i></p>
+							<p className="text-center">Back End</p>
                         </div>
 						
 						
-						<div class="col  order-sm-2">
+						<div className="col  order-sm-2">
                             
-                            <img src="assets/img/amanda.jpg" alt="Thumbnail Image" class="img-thumbnail img-responsive"/>
+                            <img src="assets/img/amanda.jpeg" alt="Thumbnail Image" class="img-thumbnail img-responsive"/>
                             <p class="text-center">Amanda Padilla <i class="fab fa-github"></i></p>
 							<p class="text-center">Auth0</p>
                         </div>
-						<div class="col order-sm-2  ">
+						<div className="col order-sm-2  ">
                             
-                            <img src="assets/img/kang.jpg" alt="Thumbnail Image" class="img-thumbnail img-responsive"/>
-                            <p class="text-center">Kang Park <i class="fab fa-github"></i></p>
-							<p class="text-center">API</p>
+                            <img src="assets/img/kang.jpg" alt="Thumbnail" className="img-thumbnail img-responsive"/>
+                            <p className="text-center">Kang Park <i className="fab fa-github"></i></p>
+							<p className="text-center">API</p>
                         </div>
                     </div>
                     
@@ -159,7 +159,7 @@ export default class Home extends Component {
 						<ul>
 							<a href="https://github.com/Voldemort2018/project3" rel="noopener noreferrer">
 								<h3>
-									<i class="fab fa-github">Github</i>
+									<i className="fab fa-github">Github</i>
 								</h3>
 							</a>
 						</ul>
