@@ -18,7 +18,11 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // CONNECT TO THE MONGO DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist"); 
+<<<<<<< HEAD
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/shindig"); 
+=======
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/reactreadinglist"); 
+>>>>>>> 2e0bc99f7bdb5d66f3cafef8e7329fe0a713ed5c
 
 // START THE API SERVER
 app.listen(PORT, function () {
