@@ -4,7 +4,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Components/navbar/Navbar';
 import Home from './Components/home/Home';
-import Users  from './Components/users/users';
+import Users  from './Components/users/User';
 
 class App extends Component {
   render() {
