@@ -5,12 +5,40 @@ import './users.css'
 
 
 export default class Users extends React.Component {
-    state = {
+
+	addEvent(event) {
+		console.log(this.refs);
+		event.preventDefault();
+		let shindig =this.refs.shindig.value;
+		let newDate = this.refs.newDate.value;
+
+		let todo = {
+			shindig,
+			newDate
+		};
+		let todos = this.state.todos;
+
+		todos.push(todo);
+
+		this.setState({
+			todos: todos
+		})
+
+	}
+	constructor (){
+		super();
+		this.addEvent =this.addEvent.bind(this);
+		this.state ={
+			todos: []
+		}
+	}
+	state = {
         date: new Date(),
       }
      
       onChange = date => this.setState({ date })
 	render() {
+		let todos = this.state.todos;
 		return (
             <div>
             
@@ -20,9 +48,15 @@ export default class Users extends React.Component {
                 </Col>
                 <Col sm="11">
                     <Card body>
-                        <CardTitle>Special Title Treatment</CardTitle>
+                        <CardTitle><h1>My Events</h1></CardTitle>
+                        <pre>
+							<form>
+							<ul>
+								{todos.map((todo => <li>{todo.shindig}</li>))}
+							</ul>
+							</form>
+						</pre>
                         
-                        <Button>Go somewhere</Button>
                     </Card>
                 </Col>
             </Row>
@@ -37,13 +71,14 @@ export default class Users extends React.Component {
 						<Form>
 							<FormGroup>
 								<Label for="event">Name</Label>
-								<Input type="name" name="eventName" id="eventExample" placeholder="Your ShinDig" />
+								<Input type="name" name="eventName" id="eventExample" ref="shindig" placeholder="Your ShinDig" />
 							</FormGroup>
 							<FormGroup>
 								<Label for="exampleTime">Time & Date</Label>
 								<Input
 									type="date"
 									name="dateTime"
+									ref="newDate"
 									id="exampleDate"
 									placeholder="Date"
 								/>
@@ -60,8 +95,8 @@ export default class Users extends React.Component {
                             </FormGroup>
 
 						</Form>
-
-						<Button>Creat Event</Button>
+			{/*button for CEATE */}
+						<Button onClick={this.addEvent}> Creat Event</Button>
 					</Card>
 				</Col>
                 
