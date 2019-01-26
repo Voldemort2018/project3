@@ -6,31 +6,64 @@ import './users.css'
 
 export default class Users extends React.Component {
 
+	details(index){
+		let todos =this.state.todos;
+		let todo = todos.find(function(todo){
+			return todo.counter === index
+		});
+		console.log("Your ShinDigs" + todo)
+
+	}
+
+	removeEvent (index){
+		let todos =this.state.todos;
+		let todo = todos.find(function(todo){
+			return todo.counter === index
+		});
+
+		todos.splice(todo, 1);
+
+		this.setState({
+			todos:todos
+		});
+
+	}
+
 	addEvent(event) {
-		console.log(this.refs);
 		event.preventDefault();
 		let shindig =this.refs.shindig.value;
 		let newDate = this.refs.newDate.value;
-
+		let counter = this.state.counter;
 		let todo = {
 			shindig,
-			newDate
+			newDate,
+			counter
 		};
+		counter +=1;
 		let todos = this.state.todos;
 
 		todos.push(todo);
 
 		this.setState({
-			todos: todos
-		})
+			todos: todos,
+			counter: counter
+		});
+
+
+		{/** reset the inputs */}
+		
 
 	}
 	constructor (){
 		super();
 		this.addEvent =this.addEvent.bind(this);
+		this.removeEvent =this.removeEvent.bind(this);
+		this.details = this.details.bind(this);
 		this.state ={
-			todos: []
+			todos: [],
+			counter: 0
 		}
+		
 	}
 	state = {
         date: new Date(),
@@ -49,13 +82,18 @@ export default class Users extends React.Component {
                 <Col sm="11">
                     <Card body>
                         <CardTitle><h1>My Events</h1></CardTitle>
-                        <pre>
-							<form>
+							<form >
 							<ul>
+								<row>
+								<li>
 								{todos.map((todo => <li>{todo.shindig}</li>))}
+								{todos.map((todo => <li>{todo.newDate}</li>))}
+								<Button onClick = {this.removeEvent.bind(null, todos.counter)}> Completed </Button>
+								<Button onClick = {this.details.bind(null, todos.counter)} >View Details</Button>
+								</li>
+								</row>
 							</ul>
 							</form>
-						</pre>
                         
                     </Card>
                 </Col>
@@ -68,8 +106,8 @@ export default class Users extends React.Component {
 				<Col md="4">
 					<Card body class ="cardbody">
 						<CardTitle><h1>Get Started</h1></CardTitle>
-						<Form>
-							<FormGroup>
+						<Form ref = "eventCreation">
+							<FormGroup >
 								<Label for="event">Name</Label>
 								<Input type="name" name="eventName" id="eventExample" ref="shindig" placeholder="Your ShinDig" />
 							</FormGroup>
@@ -96,7 +134,7 @@ export default class Users extends React.Component {
 
 						</Form>
 			{/*button for CEATE */}
-						<Button onClick={this.addEvent}> Creat Event</Button>
+						<Button onClick={this.addEvent}> Create Event</Button>
 					</Card>
 				</Col>
                 
