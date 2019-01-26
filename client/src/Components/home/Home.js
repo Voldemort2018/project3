@@ -129,7 +129,7 @@ export default class Home extends Component {
                         </div>
 						<div class="col  order-sm-2  ">
                             
-                            <img src="assets/img/steph.jpg" alt="Thumbnail Image" class="img-thumbnail img-responsive"/>
+                            <img src="assets/img/steph.png" alt="Thumbnail Image" class="img-thumbnail img-responsive"/>
                             <p class="text-center">Steph Graham <i class="fab fa-github"></i></p>
 							<p class="text-center">Back End</p>
                         </div>
@@ -137,7 +137,7 @@ export default class Home extends Component {
 						
 						<div class="col  order-sm-2">
                             
-                            <img src="assets/img/amanda.jpg" alt="Thumbnail Image" class="img-thumbnail img-responsive"/>
+                            <img src="assets/img/amanda.jpeg" alt="Thumbnail Image" class="img-thumbnail img-responsive"/>
                             <p class="text-center">Amanda Padilla <i class="fab fa-github"></i></p>
 							<p class="text-center">Auth0</p>
                         </div>
