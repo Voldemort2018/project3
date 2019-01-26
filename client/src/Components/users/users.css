@@ -14,3 +14,10 @@
 	box-shadow: 5px 5px  rgb(15, 124, 124);
     z-index: 999;
 }
+.todo{
+    padding:10px;
+    display: inline-block; 
+    zoom: 2;
+    *display: inline;
+    font-family: 'Shadows Into Light', cursive;
+}
