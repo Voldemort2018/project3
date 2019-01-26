@@ -66,7 +66,7 @@ export default class NavbarLogin extends React.Component {
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink href="/users">About Us</NavLink>
+                                <NavLink href="#about">About Us</NavLink>
                             </NavItem>
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
