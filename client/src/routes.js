@@ -3,7 +3,7 @@ import { Route, Router, Redirect } from 'react-router-dom';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
 import history from './history';
-import Users from './Components/users/Users';
+import User from './Components/users/User';
 import Home from './Components/home/Home';
 
 const auth = new Auth();
@@ -20,11 +20,11 @@ export const pageRoutes = () => {
             <div>
 
                 <Route path="/" render={(props) => <Home auth={auth} {...props} />} />
-                <Route path="/users" render={(props) => (
+                <Route path="/user" render={(props) => (
                     !auth.isAuthenticated() ? (
                         <Redirect to="/" />
                     ) : (
-                            <Users auth={auth} {...props} />
+                            <User auth={auth} {...props} />
                         )
                 )} />
                 <Route path="/callback" render={(props) => {
