@@ -74,7 +74,7 @@ export default class NavbarLogin extends React.Component {
 								</DropdownToggle>
                                 <DropdownMenu right>
                                     <DropdownItem>
-                                        <Button color="secondary" onClick={auth.login()}> Login </Button>
+                                        <Button color="secondary" onClick={this.toggle}> Login </Button>
                                         <Modal
                                             isOpen={this.state.modal}
                                             toggle={this.toggle}

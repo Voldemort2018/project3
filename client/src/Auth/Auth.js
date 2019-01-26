@@ -9,13 +9,13 @@ export default class Auth {
     userProfile;
     scopes;
     //add other scopes once other pages are available to add
-    requestedScopes = 'openid profile users'
+    requestedScopes = 'openid profile '
 
 
     auth0 = new auth0.WebAuth({
         domain: "shindig104.auth0.com",
         clientID: "Gc9JxPQx4UIWiTMIplPCl1c3ntmD669P",
-        redirectUri: " https://project3-deva-104.herokuapp.com/",
+        redirectUri: "http://localhost:3000/callback",
         audience: "https://shindig104.auth0.com/userinfo",
         responseType: "token id_token",
         scope: this.requestedScopes
