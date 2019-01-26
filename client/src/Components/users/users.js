@@ -1,7 +1,8 @@
 import React from 'react';
 import { Card, Button, CardTitle, Row, Col, Form, FormGroup, Label, Input,Container } from 'reactstrap';
 //import Calendar from 'react-calendar';
-import './users.css'
+import './users.css';
+import './list'
 
 
 export default class Users extends React.Component {
@@ -71,7 +72,7 @@ export default class Users extends React.Component {
 		});
 
 
-		{/** reset the inputs */}
+		
 		
 
 	}
@@ -90,15 +91,14 @@ export default class Users extends React.Component {
                 <Col sm="11">
                     <Card body>
                         <CardTitle><h1>My Events</h1></CardTitle>
-							<form >
-								<row>
-								
+							<form>
+								<ul>
 								{todos.map((todo => <li>{todo.shindig}</li>))}
 								{todos.map((todo => <li>{todo.dateTime}</li>))}
 								{todos.map((todo => <li>{todo.location}</li>))}
 								<Button onClick = {this.removeEvent.bind(null, todos.counter)}> Completed </Button>
 								<Button onClick = {this.details.bind(null, todos.counter)} >View Details</Button>
-								</row>
+								</ul>
 							</form>
                         
                     </Card>
