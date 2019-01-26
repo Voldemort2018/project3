@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { pageRoutes } from './routes';
 import Navbar from './Components/navbar/Navbar';
-import Home from './Components/home/Home';
-import Users  from './Components/users/users';
 
 class App extends Component {
   render() {
+    const routes = pageRoutes();
     return (
       <Router>
         <div>
           <Navbar/>
-          <Route exact path = "/" component = {Home}/>
-          <Route exact path ="/users" component ={Users}/>
+          {routes}
         </div>
       </Router>
     );

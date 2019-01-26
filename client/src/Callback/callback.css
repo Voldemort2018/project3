@@ -1,0 +1,65 @@
+.container {
+    position: relative;
+    display: block;
+    width: 220px;
+    height: 130px;
+    padding: 10px;
+    border-radius: 30px;
+    border: 5px solid #03c554;
+    background-color: #0a4d79;
+    }
+        
+.dot {
+    position: absolute;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    background-color: #149684;
+    margin: 0 10px 0 10px;
+    bottom: 10px;
+    }
+    
+.dot-two {
+    margin-left: 85px;
+    }
+    
+.dot-three {
+    margin-left: 160px;
+    }
+
+@keyframes move {
+    0% {
+    bottom: 10px;
+    }
+    50% {
+    bottom: 90px;
+    }
+    100% {
+    bottom: 10px;
+    }
+}
+
+.dot-one {
+    animation-name: move;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    }
+     
+.dot-two {
+    animation-name: move;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-delay: 0.2s;
+    }
+    
+.dot-three {
+    animation-name: move;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-delay: 0.4s;
+    }

@@ -6,7 +6,7 @@ export default class Auth {
     accessToken;
     idToken;
     expiresAt;
-    profile;
+    userProfile;
     scopes;
     //add other scopes once other pages are available to add
     requestedScopes = 'openid profile '
@@ -24,8 +24,8 @@ export default class Auth {
     constructor() {
         this.login = this.login.bind(this);
         this.logout = this.logout.bind(this);
-        this.handleAuth = this.handleAuth.bind(this);
-        this.isAuth = this.isAuth.bind(this);
+        this.handleAuthentication = this.handleAuthentication.bind(this);
+        this.isAuthenticated = this.isAuthenticated.bind(this);
         this.getAccessToken = this.getAccessToken.bind(this);
         this.getIdToken = this.getIdToken.bind(this);
         this.renewSession = this.renewSession.bind(this);
@@ -58,7 +58,7 @@ export default class Auth {
         history.replace('/home');
     }
 
-    handleAuth() {
+    handleAuthentication() {
         this.auth0.parseHash((err, authResult) => {
             if (authResult && authResult.accessToken && authResult.idToken) {
                 this.setSession(authResult);
@@ -108,7 +108,7 @@ export default class Auth {
         });
     }
 
-    isAuth() {
+    isAuthenticated() {
         //Check whether the current time is past the access token's expiry time
         let expiresAt = this.expiresAt;
         return new Date().getTime() < expiresAt;
@@ -117,9 +117,9 @@ export default class Auth {
     getProfile(cb) {
         this.auth0.client.userInfo(this.accessToken, (err, profile) => {
             if(profile) {
-                this.profile = userProfile;
+                this.userProfile = profile;
             }
-            cb(err, userProfile);
+            cb(err, profile);
         });
     }
 
