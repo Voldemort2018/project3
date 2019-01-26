@@ -4,12 +4,7 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-<<<<<<< HEAD
-
-# lock files 
-=======
 #lock files
->>>>>>> ccef203670f18287994fb1630c885eeb64635318
 *lock*
 # Runtime data
 pids
