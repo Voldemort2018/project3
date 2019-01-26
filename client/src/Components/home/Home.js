@@ -137,9 +137,9 @@ export default class Home extends Component {
 						
 						<div className="col  order-sm-2">
                             
-                            <img src="assets/img/amanda.jpg" alt="Thumbnail" className="img-thumbnail img-responsive"/>
-                            <p className="text-center">Amanda Padilla <i className="fab fa-github"></i></p>
-							<p className="text-center">Auth0</p>
+                            <img src="assets/img/amanda.jpeg" alt="Thumbnail Image" class="img-thumbnail img-responsive"/>
+                            <p class="text-center">Amanda Padilla <i class="fab fa-github"></i></p>
+							<p class="text-center">Auth0</p>
                         </div>
 						<div className="col order-sm-2  ">
                             

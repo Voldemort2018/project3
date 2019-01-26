@@ -93,9 +93,9 @@ export default class Users extends React.Component {
                         <CardTitle><h1>My Events</h1></CardTitle>
 							<form>
 								<ul>
-								{todos.map((todo => <li>{todo.shindig}</li>))}
-								{todos.map((todo => <li>{todo.dateTime}</li>))}
-								{todos.map((todo => <li>{todo.location}</li>))}
+								{todos.map((todo => <li className="todo">{todo.shindig}</li>))}
+								{todos.map((todo => <li className="todo">{todo.dateTime}</li>))}
+								{todos.map((todo => <li className="todo">{todo.location}</li>))}
 								<Button onClick = {this.removeEvent.bind(null, todos.counter)}> Completed </Button>
 								<Button onClick = {this.details.bind(null, todos.counter)} >View Details</Button>
 								</ul>
