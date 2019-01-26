@@ -4,6 +4,7 @@
   "description": "![LOGO](/client/screenshots/LOGO.png)",
   "main": "server.js",
   "dependencies": {
+    "auth0-js": "^9.9.1",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "fs": "0.0.1-security",
@@ -36,6 +37,3 @@
   },
   "homepage": "https://github.com/Voldemort2018/project3#readme"
 }
-
-
-

@@ -44,6 +44,14 @@ export default class NavbarLogin extends React.Component {
     render() {
 
         const auth = new Auth();
+
+        // login(event) {
+        //     toggle();
+        //     auth.login();
+        // };
+    
+
+       
         //Dont forget to correctly route to About Us page when navLink About Us is clicked "line 66"
         return (
             <div>
@@ -62,11 +70,11 @@ export default class NavbarLogin extends React.Component {
                             </NavItem>
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
-                                    Login/SignUp
+                                    Login / Logout
 								</DropdownToggle>
                                 <DropdownMenu right>
                                     <DropdownItem>
-                                        <Button color="secondary" onClick={this.toggle}> Login </Button>
+                                        <Button color="secondary" onClick={auth.login()}> Login </Button>
                                         <Modal
                                             isOpen={this.state.modal}
                                             toggle={this.toggle}
@@ -100,7 +108,7 @@ export default class NavbarLogin extends React.Component {
                                             </ModalFooter>
                                         </Modal>
                                     </DropdownItem>
-                                    <DropdownItem>
+                                    {/* <DropdownItem>
                                         <Button color="secondary" onClick={this.toggle}> SignUp </Button>
                                         <Modal
                                             isOpen={this.state.modal}
@@ -142,7 +150,7 @@ export default class NavbarLogin extends React.Component {
                                             <ModalFooter>
                                                 <Button color="secondary" onClick={this.toggle}> SignUp	</Button>
                                             </ModalFooter>
-                                        </Modal></DropdownItem>
+                                        </Modal></DropdownItem> */}
                                     <DropdownItem divider />
                                     <DropdownItem>Logout</DropdownItem>
                                 </DropdownMenu>
