@@ -4,6 +4,7 @@
   "description": "![LOGO](/client/screenshots/LOGO.png)",
   "main": "server.js",
   "dependencies": {
+    "auth0-js": "^9.9.1",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "fs": "^0.0.1-security",
@@ -17,7 +18,6 @@
     "if-env": "^1.0.4"
   },
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
