@@ -2,12 +2,12 @@
     -webkit-box-shadow: 10px 10px 20px 20px rgb(167, 166, 164);
 	-moz-box-shadow: 10px  10px 20px 20px rgb(167, 166, 164);
 	box-shadow: 10px 10px 20px 20px rgb(167, 166, 164);
-    
 }
 .logo{
+    position: relative;
     margin-top: 45px;
     margin-left: 25px;
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 10s linear;
     height: 10vmin;
     -webkit-box-shadow: 5px 5px  rgb(15, 124, 124);
 	-moz-box-shadow: 5px  5px  rgb(15, 124, 124);
