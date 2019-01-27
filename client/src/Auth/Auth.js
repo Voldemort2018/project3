@@ -1,6 +1,5 @@
 import history from "../history";
 import Auth0Lock from 'auth0-lock';
-import { Auth0Lock } from 'auth0-lock';
 import { AUTH_CONFIG } from './auth0-variables';
 
 export default class Auth {
