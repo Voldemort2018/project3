@@ -6,21 +6,20 @@ import history from './history';
 import User from './Components/users/User';
 import Home from './Components/home/Home';
 
-const auth = new Auth();
+export const auth = new Auth();
 
 const handleAuthentication = ({ location }) => {
     if (/access_token|id_token|error/.test(location.hash)) {
         auth.handleAuthentication();
     }
-}
+};
 
 export const pageRoutes = () => {
     return (
         <Router history={history}>
             <div>
-
-                <Route path="/" render={(props) => <Home auth={auth} {...props} />} />
-                <Route path="/user" render={(props) => (
+                <Route exact path="/" render={(props) => <Home auth={auth} {...props} />} />
+                <Route exact path="/user" render={(props) => (
                     !auth.isAuthenticated() ? (
                         <Redirect to="/" />
                     ) : (
@@ -29,7 +28,7 @@ export const pageRoutes = () => {
                 )} />
                 <Route path="/callback" render={(props) => {
                     handleAuthentication(props);
-                    return <Callback {...props} />
+                    return <Callback {...props} /> 
                 }} />
             </div>
         </Router>

@@ -1,16 +1,15 @@
-//import auth0 from "auth0-js";
 import history from "../history";
 import Auth0Lock from 'auth0-lock';
 import { AUTH_CONFIG } from './auth0-variables';
 
 export default class Auth {
-    lock = new Auth0Lock(AUTH_CONFIG.clientId, AUTH_CONFIG.domain, {
+    lock = new Auth0Lock( AUTH_CONFIG.clientId, AUTH_CONFIG.domain, {
         autoclose: true,
         auth: {
             redrectUrl: AUTH_CONFIG.callbackURL,
             responseType: "token id_token",
             params: {
-                scope: "openid "
+                scope: "openid home user"
             }
         }
     });
@@ -28,17 +27,19 @@ export default class Auth {
 
     handleAuthentication() {
         this.lock.on("authenticated", this.setSession.bind(this));
+
         this.lock.on("authorization_error", err => {
             console.log(err);
             alert(`Error: ${err.error}. Check the console for further details.`);
-            history.replace("home");
+            history.replace("/home");
         });
     }
 
     setSession(authResult) {
         if (authResult && authResult.accessToken && authResult.idToken) {
+            
             let expiresAt = JSON.stringify(
-                authResult.expiresIn * 1000 + new Date().getTime()
+                authResult.expiresIn * 36000 + new Date().getTime()
             );
 
             this.lock.getUserInfo(authResult.accessToken, function (error, profile) {

@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { pageRoutes } from './routes';
-import Navbar from './Components/navbar/Navbar';
+require("dotenv").config();
 
 
 class App extends Component {
@@ -12,7 +12,6 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Navbar/>
           {routes}
         </div>
       </Router>

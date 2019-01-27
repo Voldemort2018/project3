@@ -1,9 +1,12 @@
 import React from 'react';
 import { Card, Button, CardTitle, Row, Col, Form, FormGroup, Label, Input,Container } from 'reactstrap';
 //import Calendar from 'react-calendar';
+import Navbar from '../navbar/Navbar';
 import './users.css';
 import './list'
 
+
+let auth = this.props.auth;
 
 export default class Users extends React.Component {
 	constructor (){
@@ -78,12 +81,14 @@ export default class Users extends React.Component {
 	}
 
      
-      onChange = date => this.setState({ date })
+	  onChange = date => this.setState({ date })
+	  
+
 	render() {
 		let todos = this.state.todos;
 		return (
             <div>
-            
+            <Navbar auth= {auth} />
             <Row>
                 <Col sm ="1">
                 <img src = "assets/img/letter.png" alt="Shindig logo" height= "75" width ="75" className ="logo" respomsive/>

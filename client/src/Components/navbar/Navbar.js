@@ -14,7 +14,6 @@ import {
     Button,
 } from 'reactstrap';
 import './navbar.css';
-import auth from './../../Auth/Auth';
 
 export default class NavbarLogin extends React.Component {
     constructor(props) {
@@ -34,16 +33,16 @@ export default class NavbarLogin extends React.Component {
     }
 
     login() {
-        auth.login();
+        this.props.auth.login();
     }
 
     logout() {
-        auth.logout();
+        this.props.auth.logout();
     }
 
     render() {
 
-        const isAuthenticated = auth.isAuthenticated();
+        const { isAuthenticated } = this.props.auth.isAuthenticated();
 
         return (
             <div>

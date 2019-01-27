@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
 import { Jumbotron, Container, Card, CardImg, CardDeck } from 'reactstrap';
 import './home.css';
+import Navbar from '../navbar/Navbar';
 
 
 // variable for current year
 let year = new Date().getFullYear();
 
+
+let auth = this.props.auth;
+
+
 export default class Home extends Component {
+
+
+
 	render() {
 		return (
 			<div>
+				<Navbar auth = {auth} />
 				<header>
 					<Jumbotron fluid>
 						<Container fluid>
