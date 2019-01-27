@@ -12,17 +12,9 @@ import {
     DropdownMenu,
     DropdownItem,
     Button,
-    Modal,
-    ModalHeader,
-    ModalBody,
-    ModalFooter,
-    Input,
-    Form,
-    FormGroup,
-    Label
 } from 'reactstrap';
 import './navbar.css';
-import Auth from './../../Auth/Auth';
+import auth from './../../Auth/Auth';
 
 export default class NavbarLogin extends React.Component {
     constructor(props) {
@@ -41,18 +33,18 @@ export default class NavbarLogin extends React.Component {
         });
     }
 
+    login() {
+        auth.login();
+    }
+
+    logout() {
+        auth.logout();
+    }
+
     render() {
 
-        const auth = new Auth();
+        const isAuthenticated = auth.isAuthenticated();
 
-        // login(event) {
-        //     toggle();
-        //     auth.login();
-        // };
-    
-
-       
-        //Dont forget to correctly route to About Us page when navLink About Us is clicked "line 66"
         return (
             <div>
                 <Navbar color="" light expand="md">
@@ -74,8 +66,18 @@ export default class NavbarLogin extends React.Component {
 								</DropdownToggle>
                                 <DropdownMenu right>
                                     <DropdownItem>
-                                        <Button color="secondary" onClick={this.toggle}> Login </Button>
-                                        <Modal
+                                        {
+                                            !isAuthenticated() && (
+                                                <Button color="secondary" onClick={this.login.bind(this)}> Login </Button>
+                                            )
+                                        }
+                                        {
+                                            isAuthenticated() && (
+                                                <Button color="secondary" onClick={this.logout.bind(this)}> Logout </Button>
+                                            )
+                                        }
+
+                                        {/* <Modal
                                             isOpen={this.state.modal}
                                             toggle={this.toggle}
                                             className={this.props.className}
@@ -104,9 +106,9 @@ export default class NavbarLogin extends React.Component {
                                                 </Form>
                                             </ModalBody>
                                             <ModalFooter>
-                                                <Button color="secondary" onClick={this.toggle}> Login </Button>
+
                                             </ModalFooter>
-                                        </Modal>
+                                        </Modal> */}
                                     </DropdownItem>
                                     {/* <DropdownItem>
                                         <Button color="secondary" onClick={this.toggle}> SignUp </Button>
@@ -151,8 +153,8 @@ export default class NavbarLogin extends React.Component {
                                                 <Button color="secondary" onClick={this.toggle}> SignUp	</Button>
                                             </ModalFooter>
                                         </Modal></DropdownItem> */}
-                                    <DropdownItem divider />
-                                    <DropdownItem>Logout</DropdownItem>
+                                    {/* <DropdownItem divider />
+                                    <DropdownItem>Logout</DropdownItem> */}
                                 </DropdownMenu>
                             </UncontrolledDropdown>
                         </Nav>
@@ -162,3 +164,5 @@ export default class NavbarLogin extends React.Component {
         );
     }
 }
+
+//Commented out sections of old code for a modal for the login and log out functions

@@ -86,7 +86,7 @@ export default class Users extends React.Component {
             
             <Row>
                 <Col sm ="1">
-                <img src = "assets/img/letter.png" height= "75" width ="75" className ="logo" respomsive/>
+                <img src = "assets/img/letter.png" alt="Shindig logo" height= "75" width ="75" className ="logo" respomsive/>
                 </Col>
                 <Col sm="11">
                     <Card body>
