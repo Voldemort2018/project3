@@ -125,38 +125,39 @@ export default class Home extends Component {
                 <div id="images">
                      <div className="row" id="about">
                         
-                        <div className="col order-sm-2  ">
+                        <div className="col-sm-2  ">
                             
                             <img src="assets/img/jav.jpg" alt="Thumbnail" className="img-thumbnail img-responsive"/>
                             <p className="text-center">Javier Vega  <a href ="https://github.com/vegajavier"><i className="fab fa-github"></i></a></p>
 							<p className="text-center">Front End</p>
                         </div>
-						<div className="col order-sm-2  ">
+						<div className="col-sm-2">
                             
                             <img src="assets/img/mike.jpg" alt="Thumbnail" className="img-thumbnail img-responsive"/>
                             <p className="text-center">Michael Wenhold <a href = "https://github.com/michaelwenhold"> <i className="fab fa-github"></i></a></p>
 							<p className="text-center">Database</p>
                         </div>
-						<div className="col  order-sm-2  ">
+						<div className="col-sm-2  ">
                             
                             <img src="assets/img/steph.png" alt="Thumbnail" className="img-thumbnail img-responsive"/>
                             <p className="text-center">Steph Graham <a href ="https://github.com/StephFromAustin"><i className="fab fa-github"></i></a></p>
 							<p className="text-center">Back End</p>
                         </div>
 						
-						
-						<div className="col  order-sm-2">
+					
+						<div className="col-sm-2">
                             
                             <img src="assets/img/amanda.jpeg" alt="Thumbnail" class="img-thumbnail img-responsive"/>
-                            <p class="text-center">Amanda Padilla <a href ="https://github.com/motoko104"> <i class="fab fa-github"></i></a></p>
+                            <p class="text=center">Amanda Padilla <a href ="https://github.com/motoko104"> <i class="fab fa-github"></i></a></p>
 							<p class="text-center">Auth0</p>
                         </div>
-						<div className="col order-sm-2  ">
+						<div className="col-sm-2  ">
                             
                             <img src="assets/img/kang.jpg" alt="Thumbnail" className="img-thumbnail img-responsive"/>
                             <p className="text-center">Kang Park <a href = "https://github.com/kang-park"><i className="fab fa-github"></i></a></p>
 							<p className="text-center">API</p>
                         </div>
+						
                     </div>
                     
                 </div>  
