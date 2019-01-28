@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
 import { Jumbotron, Container, Card, CardImg, CardDeck } from 'reactstrap';
 import './home.css';
+import Navbar from '../navbar/Navbar';
 
 
 // variable for current year
 let year = new Date().getFullYear();
 
+
 export default class Home extends Component {
+
+
+
 	render() {
+
+		let auth = this.props.auth;
+
 		return (
 			<div>
+				<Navbar auth = {auth} />
 				<header>
 					<Jumbotron fluid>
 						<Container fluid>
@@ -138,7 +147,7 @@ export default class Home extends Component {
 						
 						<div className="col  order-sm-2">
                             
-                            <img src="assets/img/amanda.jpeg" alt="Thumbnail Image" class="img-thumbnail img-responsive"/>
+                            <img src="assets/img/amanda.jpeg" alt="Thumbnail" class="img-thumbnail img-responsive"/>
                             <p class="text-center">Amanda Padilla <a href ="https://github.com/motoko104"> <i class="fab fa-github"></i></a></p>
 							<p class="text-center">Auth0</p>
                         </div>
