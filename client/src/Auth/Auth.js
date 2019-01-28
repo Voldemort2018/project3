@@ -9,7 +9,7 @@ export default class Auth {
             redrectUrl: AUTH_CONFIG.callbackURL,
             responseType: "token id_token",
             params: {
-                scope: "openid home user profile"
+                scope: "openid home user"
             }
         }
     });
@@ -47,14 +47,14 @@ export default class Auth {
                     return;
                 }
                 console.log(profile);
-                localStorage.setItem("profile", JSON.parse(profile));
+                localStorage.setItem("user", JSON.parse(profile));
             });
 
             localStorage.setItem("access_token", authResult.accessToken);
             localStorage.setItem("id_token", authResult.idToken);
             localStorage.setItem("expires_at", expiresAt);
             // navigate to the home route
-            history.replace("/profile");
+            history.replace("/user");
         }
     }
 
