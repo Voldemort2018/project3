@@ -86,7 +86,7 @@ export default class Users extends React.Component {
 		let todos = this.state.todos;
 		return (
             <div>
-            <Navbar auth= {auth} {...props} />
+            <Navbar auth= {auth} />
             <Row>
                 <Col sm ="1">
                 <img src = "assets/img/letter.png" alt="Shindig logo" height= "75" width ="75" className ="logo" respomsive/>
