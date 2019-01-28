@@ -1,9 +1,7 @@
-require("dotenv").config();
-
 export const AUTH_CONFIG = {
-    clientId: process.env.AUTH_CLIENTID,
-    domain: process.env.AUTH_DOMAIN,
-    callbackURL: process.env.AUTH_CALLBACKURL
+    clientId: "Gc9JxPQx4UIWiTMIplPCl1c3ntmD669P",
+    domain: "shindig104.auth0.com",
+    callbackURL: "http://localhost:3000/callback"
 };
 
 console.log(AUTH_CONFIG);
