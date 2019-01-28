@@ -7,8 +7,6 @@ import User from './Components/users/User';
 import Home from './Components/home/Home';
 require("dotenv").config();
 
-console.log(process.env)
-
 const auth = new Auth();
 
 const handleAuthentication = ({ location }) => {

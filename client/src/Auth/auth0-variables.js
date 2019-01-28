@@ -3,5 +3,3 @@ export const AUTH_CONFIG = {
     domain: "shindig104.auth0.com",
     callbackURL: "http://localhost:3000/callback"
 };
-
-console.log(AUTH_CONFIG);
