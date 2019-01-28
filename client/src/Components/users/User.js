@@ -4,7 +4,7 @@ import MapContainer from '../map/Map';
 //import Calendar from 'react-calendar';
 import Navbar from '../navbar/Navbar';
 import './users.css';
-import './List'
+
 
 
 export default class Users extends React.Component {
@@ -19,6 +19,7 @@ export default class Users extends React.Component {
 			newDate: "",
 			location:""
 		}
+		 
 
 	}
 	handleInputChange = (event)  => {
@@ -95,14 +96,13 @@ export default class Users extends React.Component {
                 <Col sm="11">
                     <Card body>
                         <CardTitle><h1>My Events</h1></CardTitle>
-							<form>
-								<ul>
-								{todos.map((todo => <li className="todo">{todo.shindig}</li>))}
-								{todos.map((todo => <li className="todo">{todo.dateTime}</li>))}
-								{todos.map((todo => <li className="todo">{todo.location}</li>))}
-								<Button onClick = {this.removeEvent.bind(null, todos.counter)}> Completed </Button>
-								<Button onClick = {this.details.bind(null, todos.counter)} >View Details</Button>
-								</ul>
+						<form>
+								{todos.map((todos, index) => 
+								<li key ={index} className = "mylist">
+									{todos.shindig} {todos.dateTime} {todos.location}
+									<Button onClick={this.removeEvent.bind(null, todos.counter)}> Completed </Button>
+									<Button onClick={this.details.bind(null, todos.counter)}>View Details</Button>
+								</li>)}
 							</form>
                         
                     </Card>
