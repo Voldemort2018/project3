@@ -8,14 +8,14 @@ import Navbar from '../navbar/Navbar';
 let year = new Date().getFullYear();
 
 
-let auth = this.props.auth;
-
-
 export default class Home extends Component {
 
 
 
 	render() {
+
+		let auth = this.props.auth;
+
 		return (
 			<div>
 				<Navbar auth = {auth} />

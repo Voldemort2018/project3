@@ -6,8 +6,6 @@ import './users.css';
 import './list'
 
 
-let auth = this.props.auth;
-
 export default class Users extends React.Component {
 	constructor (){
 		super();
@@ -82,9 +80,9 @@ export default class Users extends React.Component {
 
      
 	  onChange = date => this.setState({ date })
-	  
 
 	render() {
+		let auth = this.props.auth;
 		let todos = this.state.todos;
 		return (
             <div>

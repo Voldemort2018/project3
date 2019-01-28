@@ -1,6 +1,8 @@
 import history from "../history";
 import Auth0Lock from 'auth0-lock';
-import { AUTH_CONFIG } from './auth0-variables';
+import { AUTH_CONFIG } from './auth0-variables.js';
+
+console.log(AUTH_CONFIG);
 
 export default class Auth {
     lock = new Auth0Lock( AUTH_CONFIG.clientId, AUTH_CONFIG.domain, {
@@ -39,7 +41,7 @@ export default class Auth {
         if (authResult && authResult.accessToken && authResult.idToken) {
             
             let expiresAt = JSON.stringify(
-                authResult.expiresIn * 36000 + new Date().getTime()
+                authResult.expiresIn * 1000 + new Date().getTime()
             );
 
             this.lock.getUserInfo(authResult.accessToken, function (error, profile) {

@@ -5,8 +5,9 @@ import Auth from './Auth/Auth';
 import history from './history';
 import User from './Components/users/User';
 import Home from './Components/home/Home';
+require("dotenv").config();
 
-export const auth = new Auth();
+const auth = new Auth();
 
 const handleAuthentication = ({ location }) => {
     if (/access_token|id_token|error/.test(location.hash)) {
@@ -17,6 +18,7 @@ const handleAuthentication = ({ location }) => {
 export const pageRoutes = () => {
     return (
         <Router history={history}>
+        {console.log(auth)}
             <div>
                 <Route exact path="/" render={(props) => <Home auth={auth} {...props} />} />
                 <Route exact path="/user" render={(props) => (
