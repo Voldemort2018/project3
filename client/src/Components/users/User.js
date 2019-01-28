@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Button, CardTitle, Row, Col, Form, FormGroup, Label, Input,Container } from 'reactstrap';
+import MapContainer from '../map/Map';
 //import Calendar from 'react-calendar';
 import './users.css';
 import './list'
@@ -108,27 +109,35 @@ export default class Users extends React.Component {
             <hr></hr>
         
             <Container>
-			
-				<Col md="4">
-					<Card body class ="cardbody">
-						<CardTitle><h1>Get Started</h1></CardTitle>
-						<Form ref = "eventCreation">
-							<FormGroup >
-								<Label for="event">Name</Label>
-								<Input type="text" name="eventName" id="eventExample" onChange={this.handleInputChange} placeholder="Your ShinDig" />
-							</FormGroup>
-							<FormGroup>
-								<Label for="exampleTime">Time & Date</Label>
-								<Input
-									type="date"
-									name="dateTime"
-									onChange={this.handleInputChange}
-									id="exampleDate"
-									placeholder="Date"
-								/>
-                            </FormGroup>
-                            {/* GOOGLEMAPS LINK NEEDED BELOW */}
-                            <FormGroup>
+					<Row>
+					<Col md="6">
+						<Card body class="cardbody">
+							<CardTitle>
+								<h1>Get Started</h1>
+							</CardTitle>
+							<Form ref="eventCreation">
+								<FormGroup>
+									<Label for="event">Name</Label>
+									<Input
+										type="text"
+										name="eventName"
+										id="eventExample"
+										onChange={this.handleInputChange}
+										placeholder="Your ShinDig"
+									/>
+								</FormGroup>
+								<FormGroup>
+									<Label for="exampleTime">Time & Date</Label>
+									<Input
+										type="date"
+										name="dateTime"
+										onChange={this.handleInputChange}
+										id="exampleDate"
+										placeholder="Date"
+									/>
+								</FormGroup>
+								{/* GOOGLEMAPS LINK NEEDED BELOW */}
+								<FormGroup>
 								<Label for="exampleLocation">Location</Label>
 								<Input
 									type="location"
@@ -138,16 +147,17 @@ export default class Users extends React.Component {
 									placeholder="Where are we partying?"
 								/>
                             </FormGroup>
-							
-						</Form>
-			{/*button for CEATE */}
-			<Button onClick={this.addEvent.bind(this)}> Create Event</Button>
-					</Card>
-				</Col>
-                
-			
-            </Container>
-            
+							</Form>
+
+							{/*button for CEATE */}
+							<Button onClick={this.addEvent.bind(this)}> Create Event</Button>
+						</Card>
+					</Col>
+					<Col md="6">
+						<MapContainer/>
+					</Col>
+					</Row>
+				</Container>
             </div>
 
 		);
