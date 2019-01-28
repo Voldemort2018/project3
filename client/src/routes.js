@@ -20,7 +20,6 @@ const handleAuthentication = ({ location }) => {
 export const pageRoutes = () => {
     return (
         <Router history={history}>
-        {console.log(auth)}
             <div>
                 <Route exact path="/" render={(props) => <Home auth={auth} {...props} />} />
                 <Route exact path="/user" render={(props) => (
