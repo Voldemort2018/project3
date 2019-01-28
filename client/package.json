@@ -13,7 +13,6 @@
   "license": "ISC",
   "dependencies": {
     "auth0-js": "^9.9.1",
-    "auth0-lock": "^11.13.1",
     "bootstrap": "^4.2.1",
     "react": "^16.7.0",
     "react-calendar": "^2.18.1",
@@ -28,8 +27,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "description": "",
-  "devDependencies": {
-    "dotenv": "^6.2.0"
-  }
+  "description": ""
 }
