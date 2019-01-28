@@ -18,7 +18,7 @@ export default class Home extends Component {
 
 		return (
 			<div>
-				<Navbar auth = {auth} />
+				<Navbar auth = {auth} {...props} />
 				<header>
 					<Jumbotron fluid>
 						<Container fluid>

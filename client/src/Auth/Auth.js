@@ -11,7 +11,7 @@ export default class Auth {
             redrectUrl: AUTH_CONFIG.callbackURL,
             responseType: "token id_token",
             params: {
-                scope: "openid home user"
+                scope: "openid home user profile"
             }
         }
     });
