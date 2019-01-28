@@ -29,7 +29,7 @@ export default class Home extends Component {
 						event infomraiton, and invite friends and family.
 					</p>
 				</Container>
-				<section id="about">
+				<section  >
 					<Container>
 						<Container className="container1">
 							<CardDeck className="carddeck">
@@ -59,10 +59,11 @@ export default class Home extends Component {
 							</CardDeck>
 						</Container>
 					</Container>
-				</section>
+					</section>
+				
 				<br />
 				<hr />
-				<section className ="seperate">
+			<section className="seperate">
 				<div className="section text-center">
                 <div className="features">
 				<br></br>
@@ -113,24 +114,24 @@ export default class Home extends Component {
 				<br></br>
 				<Container>
                 <div id="images">
-                     <div className="row">
+                     <div className="row" id="about">
                         
                         <div className="col order-sm-2  ">
                             
                             <img src="assets/img/jav.jpg" alt="Thumbnail" className="img-thumbnail img-responsive"/>
-                            <p className="text-center">Javier Vega <i className="fab fa-github"></i></p>
+                            <p className="text-center">Javier Vega  <a href ="https://github.com/vegajavier"><i className="fab fa-github"></i></a></p>
 							<p className="text-center">Front End</p>
                         </div>
 						<div className="col order-sm-2  ">
                             
                             <img src="assets/img/mike.jpg" alt="Thumbnail" className="img-thumbnail img-responsive"/>
-                            <p className="text-center">Michael Wenhold <i className="fab fa-github"></i></p>
+                            <p className="text-center">Michael Wenhold <a href = "https://github.com/michaelwenhold"> <i className="fab fa-github"></i></a></p>
 							<p className="text-center">Database</p>
                         </div>
 						<div className="col  order-sm-2  ">
                             
                             <img src="assets/img/steph.png" alt="Thumbnail" className="img-thumbnail img-responsive"/>
-                            <p className="text-center">Steph Graham <i className="fab fa-github"></i></p>
+                            <p className="text-center">Steph Graham <a href ="https://github.com/StephFromAustin"><i className="fab fa-github"></i></a></p>
 							<p className="text-center">Back End</p>
                         </div>
 						
@@ -138,13 +139,13 @@ export default class Home extends Component {
 						<div className="col  order-sm-2">
                             
                             <img src="assets/img/amanda.jpeg" alt="Thumbnail Image" class="img-thumbnail img-responsive"/>
-                            <p class="text-center">Amanda Padilla <i class="fab fa-github"></i></p>
+                            <p class="text-center">Amanda Padilla <a href ="https://github.com/motoko104"> <i class="fab fa-github"></i></a></p>
 							<p class="text-center">Auth0</p>
                         </div>
 						<div className="col order-sm-2  ">
                             
                             <img src="assets/img/kang.jpg" alt="Thumbnail" className="img-thumbnail img-responsive"/>
-                            <p className="text-center">Kang Park <i className="fab fa-github"></i></p>
+                            <p className="text-center">Kang Park <a href = "https://github.com/kang-park"><i className="fab fa-github"></i></a></p>
 							<p className="text-center">API</p>
                         </div>
                     </div>
