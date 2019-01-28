@@ -75,6 +75,9 @@ p{
 	height:175px;
 	width: 150px;
   }
+  a{
+	  color: black
+  }
 
 .footer{
 	background-color: rgb(6, 83, 83);
