@@ -4,21 +4,12 @@
   "description": "![LOGO](/client/screenshots/LOGO.png)",
   "main": "server.js",
   "dependencies": {
-<<<<<<< HEAD
-    "auth0": "^2.14.0",
-    "auth0-js": "^9.9.1",
-    "bootstrap": "^4.2.1",
-    "dotenv": "^6.2.0",
-    "express": "^4.16.4",
-    "fs": "0.0.1-security",
-=======
     "auth0-js": "^9.9.1",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "fs": "^0.0.1-security",
     "google-map-react": "^1.1.2",
     "mongodb": "^3.1.13",
->>>>>>> 807a55d380cfa224f511bb3848dbfa1a12f048e9
     "mongoose": "^5.4.6",
     "node": "^11.7.0",
     "react": "^16.7.0",
