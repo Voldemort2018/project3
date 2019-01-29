@@ -16,13 +16,13 @@
 
 ![FUTURE](images/FD.png)
 
-##Example of Homepage
+## Example of Homepage
 ![GIFHOME](gif/home2.gif)
 
-##Example of Authentication 
+## Example of Authentication 
 ![GIFAUTH](gif/auth2.gif)
 
-##Example of Userpage
+## Example of Userpage
 ![GIFCREATE](gif/candd.gif)
 
 ![GIFCOMPLETE](gif/finished.gif)
