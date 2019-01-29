@@ -21,10 +21,10 @@ export const pageRoutes = () => {
             <div>
                 <Route exact path="/" render={(props) => <Home auth={auth} {...props} />} />
                 <Route exact path="/user" render={(props) => (
-                    auth.isAuthenticated() ? (
-                        <User auth={auth} {...props} />
+                    !auth.isAuthenticated() ? (
+                        <Redirect to="/" />
                     ) : (
-                            <Redirect to="/" />
+                        <User auth={auth} {...props} />
                         )
                 )} />
                 <Route exact path="/#about" render={(props) => <Home auth= {auth} {...props} />} />
