@@ -16,11 +16,11 @@
 
 ![FUTURE](images/FD.png)
 
-![GIFHOME](gif/homepage1.gif)
+![GIFHOME](gif/home2.gif)
 
-![GIFAUTH](gif/auth.gif)
+![GIFAUTH](gif/auth2.gif)
 
-![GIFCREATE](gif/create.gif)
+![GIFCREATE](gif/candd.gif)
 
 ![GIFCOMPLETE](gif/finished.gif)
 
