@@ -5,12 +5,14 @@
   "main": "server.js",
   "dependencies": {
     "auth0-js": "^9.9.1",
+    "auth0-lock": "^11.13.1",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "fs": "^0.0.1-security",
+    "google-map-react": "^1.1.2",
     "mongodb": "^3.1.13",
     "mongoose": "^5.4.6",
-    "node": "^11.7.0",
+    "node": "^11.8.0",
     "yelp-fusion": "^2.2.1"
   },
   "devDependencies": {

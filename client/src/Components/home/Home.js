@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
 import { Jumbotron, Container, Card, CardImg, CardDeck } from 'reactstrap';
 import './home.css';
+import Navbar from '../navbar/Navbar';
 
 
 // variable for current year
 let year = new Date().getFullYear();
 
+
 export default class Home extends Component {
+
+
+
 	render() {
+
+		let auth = this.props.auth;
+
 		return (
 			<div>
+				<Navbar auth = {auth} />
 				<header>
 					<Jumbotron fluid>
 						<Container fluid>
@@ -29,14 +38,14 @@ export default class Home extends Component {
 						event infomraiton, and invite friends and family.
 					</p>
 				</Container>
-				<section id="about">
+				<section  >
 					<Container>
 						<Container className="container1">
 							<CardDeck className="carddeck">
 								<Card inverse>
 									<CardImg
 										width="100%"
-										src="https://images.unsplash.com/photo-1523837157348-ffbdaccfc7de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80"
+										src="https://images.unsplash.com/photo-1482874478989-aaf30c03fe37?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1604&q=80"
 										alt="Card image cap"
 									/>
 								</Card>
@@ -59,10 +68,11 @@ export default class Home extends Component {
 							</CardDeck>
 						</Container>
 					</Container>
-				</section>
+					</section>
+				
 				<br />
 				<hr />
-				<section className ="seperate">
+			<section className="seperate">
 				<div className="section text-center">
                 <div className="features">
 				<br></br>
@@ -113,40 +123,41 @@ export default class Home extends Component {
 				<br></br>
 				<Container>
                 <div id="images">
-                     <div className="row">
+                     <div className="row" id="about">
                         
-                        <div className="col order-sm-2  ">
+                        <div className="col-sm-2  ">
                             
                             <img src="assets/img/jav.jpg" alt="Thumbnail" className="img-thumbnail img-responsive"/>
-                            <p className="text-center">Javier Vega <i className="fab fa-github"></i></p>
+                            <p className="text-center">Javier Vega  <a href ="https://github.com/vegajavier"><i className="fab fa-github"></i></a></p>
 							<p className="text-center">Front End</p>
                         </div>
-						<div className="col order-sm-2  ">
+						<div className="col-sm-2">
                             
                             <img src="assets/img/mike.jpg" alt="Thumbnail" className="img-thumbnail img-responsive"/>
-                            <p className="text-center">Michael Wenhold <i className="fab fa-github"></i></p>
+                            <p className="text-center">Michael Wenhold <a href = "https://github.com/michaelwenhold"> <i className="fab fa-github"></i></a></p>
 							<p className="text-center">Database</p>
                         </div>
-						<div className="col  order-sm-2  ">
+						<div className="col-sm-2  ">
                             
                             <img src="assets/img/steph.png" alt="Thumbnail" className="img-thumbnail img-responsive"/>
-                            <p className="text-center">Steph Graham <i className="fab fa-github"></i></p>
+                            <p className="text-center">Steph Graham <a href ="https://github.com/StephFromAustin"><i className="fab fa-github"></i></a></p>
 							<p className="text-center">Back End</p>
                         </div>
 						
-						
-						<div className="col  order-sm-2">
+					
+						<div className="col-sm-2">
                             
-                            <img src="assets/img/amanda.jpeg" alt="Thumbnail Image" class="img-thumbnail img-responsive"/>
-                            <p class="text-center">Amanda Padilla <i class="fab fa-github"></i></p>
+                            <img src="assets/img/amanda.jpeg" alt="Thumbnail" class="img-thumbnail img-responsive"/>
+                            <p class="text=center">Amanda Padilla <a href ="https://github.com/motoko104"> <i class="fab fa-github"></i></a></p>
 							<p class="text-center">Auth0</p>
                         </div>
-						<div className="col order-sm-2  ">
+						<div className="col-sm-2  ">
                             
                             <img src="assets/img/kang.jpg" alt="Thumbnail" className="img-thumbnail img-responsive"/>
-                            <p className="text-center">Kang Park <i className="fab fa-github"></i></p>
+                            <p className="text-center">Kang Park <a href = "https://github.com/kang-park"><i className="fab fa-github"></i></a></p>
 							<p className="text-center">API</p>
                         </div>
+						
                     </div>
                     
                 </div>  

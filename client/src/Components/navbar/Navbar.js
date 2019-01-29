@@ -12,17 +12,8 @@ import {
     DropdownMenu,
     DropdownItem,
     Button,
-    Modal,
-    ModalHeader,
-    ModalBody,
-    ModalFooter,
-    Input,
-    Form,
-    FormGroup,
-    Label
 } from 'reactstrap';
 import './navbar.css';
-import Auth from './../../Auth/Auth';
 
 export default class NavbarLogin extends React.Component {
     constructor(props) {
@@ -41,18 +32,18 @@ export default class NavbarLogin extends React.Component {
         });
     }
 
+    login() {
+        this.props.auth.login();
+    }
+
+    logout() {
+        this.props.auth.logout();
+    }
+
     render() {
 
-        const auth = new Auth();
+        const { isAuthenticated } = this.props.auth;
 
-        // login(event) {
-        //     toggle();
-        //     auth.login();
-        // };
-    
-
-       
-        //Dont forget to correctly route to About Us page when navLink About Us is clicked "line 66"
         return (
             <div>
                 <Navbar color="" light expand="md">
@@ -65,8 +56,11 @@ export default class NavbarLogin extends React.Component {
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
+                        <NavItem>
+                                <NavLink href="/user">Profile</NavLink>
+                            </NavItem>
                             <NavItem>
-                                <NavLink href="/users">About Us</NavLink>
+                                <NavLink href="#about">About Us</NavLink>
                             </NavItem>
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
@@ -74,85 +68,15 @@ export default class NavbarLogin extends React.Component {
 								</DropdownToggle>
                                 <DropdownMenu right>
                                     <DropdownItem>
-                                        <Button color="secondary" onClick={this.toggle}> Login </Button>
-                                        <Modal
-                                            isOpen={this.state.modal}
-                                            toggle={this.toggle}
-                                            className={this.props.className}
-                                        >
-                                            <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
-                                            <ModalBody>
-                                                <Form>
-                                                    <FormGroup>
-                                                        <Label for="exampleEmail">Email</Label>
-                                                        <Input
-                                                            type="email"
-                                                            name="email"
-                                                            id="exampleEmail"
-                                                            placeholder="with a placeholder"
-                                                        />
-                                                    </FormGroup>
-                                                    <FormGroup>
-                                                        <Label for="examplePassword">Password</Label>
-                                                        <Input
-                                                            type="password"
-                                                            name="password"
-                                                            id="examplePassword"
-                                                            placeholder="password"
-                                                        />
-                                                    </FormGroup>
-                                                </Form>
-                                            </ModalBody>
-                                            <ModalFooter>
-                                                <Button color="secondary" onClick={this.toggle}> Login </Button>
-                                            </ModalFooter>
-                                        </Modal>
+                                        {
+                                            !isAuthenticated() ? (
+                                                <Button color="secondary" onClick={this.login.bind(this)}> Login </Button>
+                                            ) :
+                                             (
+                                                <Button color="secondary" onClick={this.logout.bind(this)}> Logout </Button>
+                                            )
+                                        }
                                     </DropdownItem>
-                                    {/* <DropdownItem>
-                                        <Button color="secondary" onClick={this.toggle}> SignUp </Button>
-                                        <Modal
-                                            isOpen={this.state.modal}
-                                            toggle={this.toggle}
-                                            className={this.props.className}
-                                        >
-                                            <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
-                                            <ModalBody>
-                                                <Form>
-                                                    <FormGroup>
-                                                        <Label for="exampleName">Name</Label>
-                                                        <Input
-                                                            type="name"
-                                                            name="user"
-                                                            id="exampleName"
-                                                            placeholder="Full Name"
-                                                        />
-                                                    </FormGroup>
-                                                    <FormGroup>
-                                                        <Label for="exampleEmail">Email</Label>
-                                                        <Input
-                                                            type="email"
-                                                            name="email"
-                                                            id="exampleEmail"
-                                                            placeholder="test@email.com"
-                                                        />
-                                                    </FormGroup>
-                                                    <FormGroup>
-                                                        <Label for="examplePassword">Password</Label>
-                                                        <Input
-                                                            type="password"
-                                                            name="password"
-                                                            id="examplePassword"
-                                                            placeholder="password"
-                                                        />
-                                                    </FormGroup>
-                                                </Form>
-                                            </ModalBody>
-                                            <ModalFooter>
-                                                <Button color="secondary" onClick={this.toggle}> SignUp	</Button>
-                                            </ModalFooter>
-                                        </Modal></DropdownItem> */}
-                                    <DropdownItem divider />
-                                    <DropdownItem>Logout</DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledDropdown>
                         </Nav>
@@ -162,3 +86,5 @@ export default class NavbarLogin extends React.Component {
         );
     }
 }
+
+//Commented out sections of old code for a modal for the login and log out functions
