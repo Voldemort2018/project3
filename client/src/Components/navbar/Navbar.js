@@ -70,17 +70,10 @@ export default class NavbarLogin extends React.Component {
                                             {/* nothing to add here */}
                                         </NavItem>
                                     )
-                            }{
-                                window.location('/') ? (
-                                    <NavItem>
-                                        <NavLink href="/#about" onClick={this.goTo.bind(this)>About Us</NavLink>
-                                    </NavItem>
-                                ) : (
-                                        <NavItem>
-                                            {/* nothing to add here */}
-                                        </NavItem>
-                                    )
                             }
+                            <NavItem>
+                                <NavLink href="/#about" onClick={this.goTo.bind(this)}>About Us</NavLink>
+                            </NavItem>
 
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
