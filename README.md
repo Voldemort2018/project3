@@ -25,8 +25,6 @@
 ## Example of Userpage
 ![GIFCREATE](gif/candd.gif)
 
-![GIFCOMPLETE](gif/finished.gif)
-
 ![TEAM](images/Team.png)
 
 
