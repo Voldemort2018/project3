@@ -10,15 +10,21 @@
 
 ![WIREFRAME3](images/Wireframe3.png)
 
-![GOALS](images/Goal.png)
+![GOALS](images/teamgoals.png)
 
 ![TECH](images/TechUsed.png)
 
 ![FUTURE](images/FD.png)
 
-![GIFHOME](images/homepage1.gif)
+![GIFHOME](gif/homepage1.gif)
 
-![TEAM] (images/Team.png)
+![GIFAUTH](gif/auth.gif)
+
+![GIFCREATE](gif/create.gif)
+
+![GIFCOMPLETE](gif/finished.gif)
+
+![TEAM](images/Team.png)
 
 
 
