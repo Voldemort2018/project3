@@ -57,7 +57,7 @@ export default class NavbarLogin extends React.Component {
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             {
-                                !isAuthenticated() ? (
+                                isAuthenticated() ? (
                                     <NavItem>
                                         <NavLink href="/user">Profile</NavLink>
                                     </NavItem>
