@@ -4,7 +4,7 @@ import MapContainer from '../map/Map';
 //import Calendar from 'react-calendar';
 import Navbar from '../navbar/Navbar';
 import './users.css';
-import './List'
+import './list'
 
 
 export default class Users extends React.Component {
