@@ -6,7 +6,6 @@ import Navbar from '../navbar/Navbar';
 import './users.css';
 
 
-
 export default class Users extends React.Component {
 	constructor (){
 		super();
