@@ -20,19 +20,18 @@ export const pageRoutes = () => {
         <Router history={history}>
             <div>
                 <Route exact path="/" render={(props) => <Home auth={auth} {...props} />} />
-                <Route exact path="/user" render={(props) => (
-                    !auth.isAuthenticated() ? (
-                        <Redirect to="/" />
-                    ) : (
-                            <User auth={auth} {...props} />
-                        )
-                )} />
-                <Route path="/callback" render={(props) => {
+                <Route exact path="/user" render={(props) => <User auth={auth} {...props} />} />
+                <Route exact path="/#about" render={(props) => <Home auth= {auth} {...props} />} />
+                <Route path="/callback" render={props => {
                     handleAuthentication(props);
-                    return <Callback {...props} /> 
+                    return <Callback {...props} />
                 }} />
             </div>
         </Router>
     );
 }
+
+
+
+
 

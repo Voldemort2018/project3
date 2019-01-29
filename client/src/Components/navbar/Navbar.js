@@ -32,6 +32,10 @@ export default class NavbarLogin extends React.Component {
         });
     }
 
+    goTo(route) {
+        this.props.history.replace(`/${route}`);
+    }
+
     login() {
         this.props.auth.login();
     }
@@ -56,12 +60,21 @@ export default class NavbarLogin extends React.Component {
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
-                        <NavItem>
-                                <NavLink href="/user">Profile</NavLink>
-                            </NavItem>
+                            {
+                                isAuthenticated() ? (
+                                    <NavItem>
+                                        <NavLink href="/user" onClick={this.goTo.bind(this, 'user')}>Profile</NavLink>
+                                    </NavItem>
+                                ) : (
+                                        <NavItem>
+                                            {/* nothing to add here */}
+                                        </NavItem>
+                                    )
+                            }
                             <NavItem>
-                                <NavLink href="#about">About Us</NavLink>
+                                <NavLink href="/#about" onClick={this.goTo.bind(this, '#about')}>About Us</NavLink>
                             </NavItem>
+
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
                                     Login / Logout
@@ -72,9 +85,9 @@ export default class NavbarLogin extends React.Component {
                                             !isAuthenticated() ? (
                                                 <Button color="secondary" onClick={this.login.bind(this)}> Login </Button>
                                             ) :
-                                             (
-                                                <Button color="secondary" onClick={this.logout.bind(this)}> Logout </Button>
-                                            )
+                                                (
+                                                    <Button color="secondary" onClick={this.logout.bind(this)}> Logout </Button>
+                                                )
                                         }
                                     </DropdownItem>
                                 </DropdownMenu>

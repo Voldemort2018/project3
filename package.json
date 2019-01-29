@@ -4,23 +4,20 @@
   "description": "![LOGO](/client/screenshots/LOGO.png)",
   "main": "server.js",
   "dependencies": {
-    "auth0-js": "^9.9.1",
+    "auth0-js": "^9.10.0",
     "auth0-lock": "^11.13.2",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
-    "fs": "^0.0.1-security",
+    "fs": "0.0.1-security",
     "google-map-react": "^1.1.2",
     "google-maps-react": "^2.0.2",
     "mongodb": "^3.1.13",
-    "mongoose": "^5.4.6",
+    "mongoose": "^5.4.7",
     "node": "^11.8.0",
     "react-google-maps": "^9.4.5",
     "yelp-fusion": "^2.2.1"
   },
-  "devDependencies": {
-    "concurrently": "^4.1.0",
-    "if-env": "^1.0.4"
-  },
+  "devDependencies": {},
   "scripts": {
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
