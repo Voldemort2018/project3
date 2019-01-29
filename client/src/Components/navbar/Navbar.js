@@ -32,6 +32,10 @@ export default class NavbarLogin extends React.Component {
         });
     }
 
+    goTo(route) {
+        this.props.history.replace(`/${route}`);
+    }
+
     login() {
         this.props.auth.login();
     }
@@ -59,17 +63,25 @@ export default class NavbarLogin extends React.Component {
                             {
                                 isAuthenticated() ? (
                                     <NavItem>
-                                        <NavLink href="/user">Profile</NavLink>
+                                        <NavLink href="/user" onClick={this.goTo.bind(this)}>Profile</NavLink>
                                     </NavItem>
                                 ) : (
+                                        <NavItem>
+                                            {/* nothing to add here */}
+                                        </NavItem>
+                                    )
+                            }{
+                                window.location('/') ? (
                                     <NavItem>
-                                        {/* nothing to add here */}
+                                        <NavLink href="/#about" onClick={this.goTo.bind(this)>About Us</NavLink>
                                     </NavItem>
-                                )
+                                ) : (
+                                        <NavItem>
+                                            {/* nothing to add here */}
+                                        </NavItem>
+                                    )
                             }
-                            <NavItem>
-                                <NavLink href="#about">About Us</NavLink>
-                            </NavItem>
+
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
                                     Login / Logout

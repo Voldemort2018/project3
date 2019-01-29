@@ -5,7 +5,7 @@ const routes = require ('./routes');
 require("dotenv").config();
 const app = express ();
 const PORT = process.env.PORT || 3001;
-
+console.log(process.env.BATMAN)
 // DEFINE MIDDLEWARE HERE 
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());

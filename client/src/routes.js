@@ -27,7 +27,7 @@ export const pageRoutes = () => {
                             <Redirect to="/" />
                         )
                 )} />
-                <Route path="/callback" render={(props) => {
+                <Route path="/callback" render={props => {
                     handleAuthentication(props);
                     return <Callback {...props} />
                 }} />
@@ -35,4 +35,8 @@ export const pageRoutes = () => {
         </Router>
     );
 }
+
+
+
+
 
