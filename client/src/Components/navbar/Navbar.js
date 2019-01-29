@@ -61,7 +61,11 @@ export default class NavbarLogin extends React.Component {
                                     <NavItem>
                                         <NavLink href="/user">Profile</NavLink>
                                     </NavItem>
-                                ) 
+                                ) : (
+                                    <NavItem>
+                                        {/* nothing to add here */}
+                                    </NavItem>
+                                )
                             }
                             <NavItem>
                                 <NavLink href="#about">About Us</NavLink>
