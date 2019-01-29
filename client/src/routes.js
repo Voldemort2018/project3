@@ -27,6 +27,7 @@ export const pageRoutes = () => {
                             <Redirect to="/" />
                         )
                 )} />
+                <Route exact path="/#about" render={(props) => <Home auth= {auth} {...props} />} />
                 <Route path="/callback" render={props => {
                     handleAuthentication(props);
                     return <Callback {...props} />

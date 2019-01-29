@@ -63,7 +63,7 @@ export default class NavbarLogin extends React.Component {
                             {
                                 isAuthenticated() ? (
                                     <NavItem>
-                                        <NavLink href="/user" onClick={this.goTo.bind(this)}>Profile</NavLink>
+                                        <NavLink href="/user" onClick={this.goTo.bind(this, 'user')}>Profile</NavLink>
                                     </NavItem>
                                 ) : (
                                         <NavItem>
@@ -72,7 +72,7 @@ export default class NavbarLogin extends React.Component {
                                     )
                             }
                             <NavItem>
-                                <NavLink href="/#about" onClick={this.goTo.bind(this)}>About Us</NavLink>
+                                <NavLink href="/#about" onClick={this.goTo.bind(this, '#about')}>About Us</NavLink>
                             </NavItem>
 
                             <UncontrolledDropdown nav inNavbar>
