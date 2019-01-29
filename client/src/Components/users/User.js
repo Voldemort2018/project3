@@ -5,8 +5,6 @@ import MapContainer from '../map/Map';
 import Navbar from '../navbar/Navbar';
 import './users.css';
 
-console.log(props);
-
 export default class Users extends React.Component {
 	constructor (){
 		super();
