@@ -102,6 +102,8 @@ export default class Users extends React.Component {
             			<th> Name</th>
             			<th>Date</th>
             			<th>Location</th>
+						<th>Completed</th>
+						<th>Details</th>
           				</tr>
         			</thead>
         			<tbody>
