@@ -47,7 +47,7 @@ export default class NavbarLogin extends React.Component {
     render() {
 
         const { isAuthenticated } = this.props.auth;
-
+        console.log(props);
         return (
             <div>
                 <Navbar color="" light expand="md">
@@ -61,6 +61,7 @@ export default class NavbarLogin extends React.Component {
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             {
+                        
                                 isAuthenticated() ? (
                                     <NavItem>
                                         <NavLink href="/user" onClick={this.goTo.bind(this, 'user')}>Profile</NavLink>
