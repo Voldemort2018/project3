@@ -45,7 +45,7 @@ export default class Home extends Component {
 								<Card inverse>
 									<CardImg
 										width="100%"
-										src="https://images.unsplash.com/photo-1523837157348-ffbdaccfc7de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80"
+										src="https://images.unsplash.com/photo-1482874478989-aaf30c03fe37?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1604&q=80"
 										alt="Card image cap"
 									/>
 								</Card>

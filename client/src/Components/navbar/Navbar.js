@@ -56,6 +56,9 @@ export default class NavbarLogin extends React.Component {
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
+                        <NavItem>
+                                <NavLink href="/user">Profile</NavLink>
+                            </NavItem>
                             <NavItem>
                                 <NavLink href="#about">About Us</NavLink>
                             </NavItem>
