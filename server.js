@@ -2,6 +2,7 @@
 const express = require('express');
 const mongoose = require ('mongoose');
 const routes = require ('./routes');
+require("dotenv").config();
 const app = express ();
 const PORT = process.env.PORT || 3001;
 
@@ -9,18 +10,18 @@ const PORT = process.env.PORT || 3001;
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
-// SERVE UP STATIC ASSETS (HEROKU)
+// // SERVE UP STATIC ASSETS (HEROKU)
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 }
 
-// ADD ROUTES (API AND VIEW) 
+// // ADD ROUTES (API AND VIEW) 
 app.use(routes);
 
 // CONNECT TO THE MONGO DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/shindig"); 
 
 // START THE API SERVER
 app.listen(PORT, function () {
-    console.log("API server is now listening on PORT ${PORT}!");
+    console.log(`API server is now listening on PORT ${PORT}!`);
 });
