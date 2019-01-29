@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Button, CardTitle, Row, Col, Form, FormGroup, Label, Input,Container } from 'reactstrap';
+import { Card, Button, CardTitle, Row, Col, Form, FormGroup, Label, Input,Container,Table } from 'reactstrap';
 import MapContainer from '../map/Map';
 //import Calendar from 'react-calendar';
 import Navbar from '../navbar/Navbar';
@@ -95,14 +95,28 @@ export default class Users extends React.Component {
                 <Col sm="11">
                     <Card body>
                         <CardTitle><h1>My Events</h1></CardTitle>
-						<form>
-								{todos.map((todos, index) => 
-								<li key ={index} className = "mylist">
-									{todos.shindig} {todos.dateTime} {todos.location}
-									<Button onClick={this.removeEvent.bind(null, todos.counter)}> Completed </Button>
-									<Button onClick={this.details.bind(null, todos.counter)}>View Details</Button>
-								</li>)}
-							</form>
+						<Table>
+        			<thead>
+          				<tr>
+							  <th></th>
+            			<th> Name</th>
+            			<th>Date</th>
+            			<th>Location</th>
+          				</tr>
+        			</thead>
+        			<tbody>
+					{todos.map((todos, index) => 
+						<tr key ={index} className = "mylist">
+            			<th scope="row"></th>
+            			<td>{todos.shindig}</td>
+            			<td>{todos.dateTime}</td>
+            			<td>{todos.location}</td>
+						<td><Button onClick={this.removeEvent.bind(null, todos.counter)}> Completed </Button></td>
+						<td><Button onClick={this.details.bind(null, todos.counter)}>View Details</Button></td>
+          				</tr>)}
+          
+        </tbody>
+      </Table>
                         
                     </Card>
                 </Col>
@@ -147,12 +161,13 @@ export default class Users extends React.Component {
 									id="exampleMap"
 									onChange={this.handleInputChange}
 									placeholder="Where are we partying?"
+									
 								/>
                             </FormGroup>
 							</Form>
 
 							{/*button for CEATE */}
-							<Button onClick={this.addEvent.bind(this)}> Create Event</Button>
+							<Button onClick={this.addEvent.bind(this)} > Create Event</Button>
 						</Card>
 					</Col>
 					<Col md="6">
