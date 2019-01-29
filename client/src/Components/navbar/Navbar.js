@@ -56,9 +56,16 @@ export default class NavbarLogin extends React.Component {
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
-                        <NavItem>
-                                <NavLink href="/user">Profile</NavLink>
-                            </NavItem>
+                            {
+                                !isAuthenticated() ? (
+                                    <NavItem>
+                                        <NavLink href="/user">Profile</NavLink>
+                                    </NavItem>
+                                ) : (
+                                    <NavItem>
+                                    </NavItem>
+                                )
+                            }
                             <NavItem>
                                 <NavLink href="#about">About Us</NavLink>
                             </NavItem>
@@ -72,9 +79,9 @@ export default class NavbarLogin extends React.Component {
                                             !isAuthenticated() ? (
                                                 <Button color="secondary" onClick={this.login.bind(this)}> Login </Button>
                                             ) :
-                                             (
-                                                <Button color="secondary" onClick={this.logout.bind(this)}> Logout </Button>
-                                            )
+                                                (
+                                                    <Button color="secondary" onClick={this.logout.bind(this)}> Logout </Button>
+                                                )
                                         }
                                     </DropdownItem>
                                 </DropdownMenu>
