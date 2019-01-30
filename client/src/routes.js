@@ -21,7 +21,7 @@ export const pageRoutes = () => {
         <Router history={history}>
             <div>
                 <Route exact path="/" render={(props) => <Home auth={auth} {...props} />} />
-                <Route exact path="/user" render={(props) => <User auth={auth} {...props} />} />
+                <Route path="/user" render={(props) => <User auth={auth} {...props} />} />
                 <Route exact path="/" render={(props) => <Navbar auth={auth} {...props} />} />
                 <Route exact path="/#about" render={(props) => <Home auth= {auth} {...props} />} />
                 <Route path="/callback" render={props => {
