@@ -47,7 +47,8 @@ export default class NavbarLogin extends React.Component {
     render() {
 
         const { isAuthenticated } = this.props.auth;
-        console.log(props);
+        console.log(this.props);
+
         return (
             <div>
                 <Navbar color="" light expand="md">

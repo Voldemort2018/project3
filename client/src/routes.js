@@ -3,6 +3,7 @@ import { Route, Router, Redirect } from 'react-router-dom';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
 import history from './history';
+import Navbar from './Components/navbar/Navbar';
 import User from './Components/users/User';
 import Home from './Components/home/Home';
 require("dotenv").config();
@@ -21,6 +22,7 @@ export const pageRoutes = () => {
             <div>
                 <Route exact path="/" render={(props) => <Home auth={auth} {...props} />} />
                 <Route exact path="/user" render={(props) => <User auth={auth} {...props} />} />
+                <Route exact path="/" render={(props) => <Navbar auth={auth} {...props} />} />
                 <Route exact path="/#about" render={(props) => <Home auth= {auth} {...props} />} />
                 <Route path="/callback" render={props => {
                     handleAuthentication(props);
